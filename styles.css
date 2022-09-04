@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@200;300;400;500;700;900&family=Orbitron:wght@400;500;600;700;800;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Orbitron", sans-serif;
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  height: 100vh;
+  background-color: rgb(0 53 76);
+  text-align: center;
+}
+
+#date {
+  color: rgb(226, 223, 223);
+  position: fixed;
+  left: 1rem;
+  top: 0.5rem;
+  letter-spacing: 4px;
+}
+#location {
+  font-family: "Montserrat", "sans-serif";
+  font-size: 3vw;
+  color: aliceblue;
+}
+
+nav {
+  position: absolute;
+  bottom: 10vh;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+nav button {
+  letter-spacing: 0.5vw;
+  font-size: 2.2vw;
+  margin: 0px 10px;
+  padding: 10px;
+}
+
+.clock {
+  width: 100vw;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: -1;
+}
+#timer {
+  display: block;
+  font-size: 7vw;
+  color: white;
+  letter-spacing: -1px;
+  letter-spacing: 9px;
+}
+
+/* setting when screen = 400 or less */
+@media screen and (max-width: 500px) {
+  nav {
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    bottom: 5vh;
+  }
+  nav button {
+    width: 60%;
+    font-size: 1rem;
+    margin: 5px 20px;
+    padding: 10px;
+  }
+  .clock {
+    top: 35%;
+  }
+  #timer {
+    font-size: 9vw;
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 350px) {
+  #location {
+    font-size: 1em;
+  }
+}
